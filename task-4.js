@@ -22,5 +22,14 @@ function findAveragePhonePrice(phones) {
         { model: "PhoneF", brand: "HTC", price: 48000 },
     ];
 
-const avg = findAveragePhonePrice(phones);
+// const avg = findAveragePhonePrice(phones);
+// console.log("Average Phone Price:", avg, "tk");
+
+function findAveragePhonePrice2(phones) {
+    if (phones.length === 0) return 0;
+    
+    const total = phones.reduce((sum, phone) => sum + phone.price, 0);
+    return total / phones.length;
+}
+const avg = findAveragePhonePrice2(phones);
 console.log("Average Phone Price:", avg, "tk");
